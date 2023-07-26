@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="6.785" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Slider Test" name="Homepage contains at least three sliders" time="6.675">
+<testsuite name="Cucumber" time="11.862" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Arrival Test" name="Homepage contains at least three arrivals" time="11.726">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
-Then i should see at least three sliders....................................passed
+Then i should see at least three arrivals...................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

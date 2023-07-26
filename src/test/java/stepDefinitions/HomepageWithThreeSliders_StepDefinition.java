@@ -27,6 +27,7 @@ public class HomepageWithThreeSliders_StepDefinition {
     @Then("i should see at least three arrivals")
     public void iShouldSeeAtLeastThreeArrivals() {
 
+        homepage.homepageArrivals();
 
     }
 }

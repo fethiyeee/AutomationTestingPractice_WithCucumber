@@ -25,8 +25,8 @@ public class Practice_Automation_Testing_Homepage {
 
     public void homepageArrivals(){
         int expectedArrivalsCount=3;
-        List<WebElement> sliderList= Driver.getDriver().findElements(arrivals);
-        int actualArrivalsCount=sliderList.size();
+        List<WebElement> arrivalsList= Driver.getDriver().findElements(arrivals);
+        int actualArrivalsCount=arrivalsList.size();
         Assert.assertEquals(expectedArrivalsCount,actualArrivalsCount);
     }
 
