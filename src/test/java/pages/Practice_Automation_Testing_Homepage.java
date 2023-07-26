@@ -11,14 +11,23 @@ public class Practice_Automation_Testing_Homepage {
 
     By sliders= By.xpath("//div[contains(@class, 'n2-ss-slider-')]");
 
+    By arrivals=By.className("woocommerce-LoopProduct-link");
+
 
 
 
     public void homepageSliders(){
-        int expectedSliderCount=3;
-        List<WebElement> sliderList= Driver.getDriver().findElements(sliders);
-        int actualSliderCount=sliderList.size();
-        Assert.assertEquals(expectedSliderCount,actualSliderCount);
+        int expectedSlidersCount=3;
+        List<WebElement> slidersList= Driver.getDriver().findElements(sliders);
+        int actualSlidersCount=slidersList.size();
+        Assert.assertEquals(expectedSlidersCount,actualSlidersCount);
+    }
+
+    public void homepageArrivals(){
+        int expectedArrivalsCount=3;
+        List<WebElement> sliderList= Driver.getDriver().findElements(arrivals);
+        int actualArrivalsCount=sliderList.size();
+        Assert.assertEquals(expectedArrivalsCount,actualArrivalsCount);
     }
 
 
