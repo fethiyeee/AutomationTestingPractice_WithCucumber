@@ -1,4 +1,4 @@
 Feature: Homepage Slider Test
-  Scenario: Homepage contains at least three slider
+  Scenario: Homepage contains at least three sliders
     Given i am on the homepage
-    Then i should see at least three slider
+    Then i should see at least three sliders
