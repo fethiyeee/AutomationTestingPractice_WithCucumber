@@ -16,29 +16,29 @@ import java.util.Date;
 public class Hooks {
 
 
-    @Before //her senaryodan once calisacak
+    @Before
     public void setUo(Scenario scenario) {
-        System.out.println("senaryo basladi..");
+        System.out.println("scenario started..");
         System.out.println("scenario id = " + scenario.getId());
         System.out.println("scenario name = " + scenario.getName());
 
     }
 
-    @After //her senaryodan sonra
+    @After
     public void tearDown(Scenario scenario) throws IOException {
-        System.out.println("senayodan sonra test ortami temizleniyor");
+
         if (scenario.isFailed()) {
             System.out.println("scenario failed");
             // takeScreenshot(scenario.getName());
 
-            //konsoldaki "View your Cucumber Report at: " kismina tiklayarak da ekran goruntusunu gorebiliriz..
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "FailedScenarioScreenshot");
             System.out.println("Screenshot taken for failed scenario: " + scenario.getName());
         }
+        Driver.getDriver().close();
     }
 
-    //  Driver.getDriver().close();
+
 
     public String takeScreenshot(String name) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
