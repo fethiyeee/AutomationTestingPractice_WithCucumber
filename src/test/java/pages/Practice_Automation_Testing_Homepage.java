@@ -13,6 +13,8 @@ public class Practice_Automation_Testing_Homepage {
 
     By arrivals=By.className("woocommerce-LoopProduct-link");
 
+    By img1=By.id("//*[@id=\"text-22-sub_row_1-0-2-0-0\"]/div[1]/ul[1]/li[1]/a[1]/img[1]");
+
 
 
 
@@ -28,6 +30,10 @@ public class Practice_Automation_Testing_Homepage {
         List<WebElement> arrivalsList= Driver.getDriver().findElements(arrivals);
         int actualArrivalsCount=arrivalsList.size();
         Assert.assertEquals(expectedArrivalsCount,actualArrivalsCount);
+    }
+
+    public void clickImg1(){
+        Driver.getDriver().findElement(img1).click();
     }
 
 
