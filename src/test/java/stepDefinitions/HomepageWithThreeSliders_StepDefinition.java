@@ -42,5 +42,6 @@ public class HomepageWithThreeSliders_StepDefinition {
     @Then("i can add that book into the basket")
     public void iCanAddThatBookIntoTheBasket() {
 
+        homepage.addToBasket();
     }
 }
