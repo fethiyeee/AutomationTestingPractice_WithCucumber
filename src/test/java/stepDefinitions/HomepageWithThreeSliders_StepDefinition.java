@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_Homepage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -28,6 +29,16 @@ public class HomepageWithThreeSliders_StepDefinition {
     public void iShouldSeeAtLeastThreeArrivals() {
 
         homepage.homepageArrivals();
+
+    }
+
+    @When("i click image of arrivals")
+    public void iClickImageOfArrivals() {
+
+    }
+
+    @Then("i can add that book into the basket")
+    public void iCanAddThatBookIntoTheBasket() {
 
     }
 }
