@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.749" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Arrival Test" name="Homepage contains at least three arrivals" time="5.635">
+<testsuite name="Cucumber" time="17.468" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Arrival Test" name="Homepage arrivals are clickable" time="17.328">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 Then i should see at least three arrivals...................................passed
+When i click image of arrivals..............................................passed
+Then i can add that book into the basket....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
