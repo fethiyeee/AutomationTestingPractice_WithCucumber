@@ -35,6 +35,8 @@ public class HomepageWithThreeSliders_StepDefinition {
     @When("i click image of arrivals")
     public void iClickImageOfArrivals() {
 
+        homepage.clickImg1();
+
     }
 
     @Then("i can add that book into the basket")
