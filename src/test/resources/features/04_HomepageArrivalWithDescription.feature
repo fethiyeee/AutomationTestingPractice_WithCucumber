@@ -1,3 +1,4 @@
+@description
 Feature: Homepage Arrival Test
   Scenario: Homepage arrivals are clickable
     Given i am on the homepage
