@@ -48,5 +48,6 @@ public class HomepageWithThreeSliders_StepDefinition {
     @Then("i can see a description regarding that book")
     public void iCanSeeADescriptionRegardingThatBook() {
 
+        homepage.descriptionIsVisible();
     }
 }

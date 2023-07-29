@@ -19,6 +19,8 @@ public class Practice_Automation_Testing_Homepage {
 
     By productAddedMessage=By.xpath("//*[@id=\"content\"]/div[1]");
 
+    By description=By.xpath("//*[@id=\"tab-description\"]/h2[1]");
+
 
 
 
@@ -46,6 +48,9 @@ public class Practice_Automation_Testing_Homepage {
 
     }
 
+    public void descriptionIsVisible(){
+        Assert.assertTrue(Driver.getDriver().findElement(description).isDisplayed());
+    }
 
 
 
