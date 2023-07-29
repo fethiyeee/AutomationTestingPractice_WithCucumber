@@ -32,16 +32,17 @@ public class HomepageWithThreeSliders_StepDefinition {
 
     }
 
-    @When("i click image of arrivals")
-    public void iClickImageOfArrivals() {
-
+    @When("i click the image in the Arrivals")
+    public void iClickTheImageInTheArrivals() {
         homepage.clickImg1();
-
     }
+
 
     @Then("i can add that book into the basket")
     public void iCanAddThatBookIntoTheBasket() {
 
         homepage.addToBasket();
     }
+
+
 }
