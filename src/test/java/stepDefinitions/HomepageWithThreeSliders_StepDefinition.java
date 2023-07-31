@@ -50,4 +50,9 @@ public class HomepageWithThreeSliders_StepDefinition {
 
         homepage.descriptionIsVisible();
     }
+
+    @Then("i can see Reviews regarding that book")
+    public void iCanSeeReviewsRegardingThatBook() {
+        homepage.reviewsAreVisible();
+    }
 }
