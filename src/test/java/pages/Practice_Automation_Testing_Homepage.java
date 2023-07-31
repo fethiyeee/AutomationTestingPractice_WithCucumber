@@ -21,6 +21,9 @@ public class Practice_Automation_Testing_Homepage {
 
     By description=By.xpath("//*[@id=\"tab-description\"]/h2[1]");
 
+    By reviews=By.xpath("//*[@id=\"product-160\"]/div[3]/ul[1]/li[2]/a[1]");
+
+
 
 
 
@@ -50,6 +53,10 @@ public class Practice_Automation_Testing_Homepage {
 
     public void descriptionIsVisible(){
         Assert.assertTrue(Driver.getDriver().findElement(description).isDisplayed());
+    }
+
+    public void reviewsAreVisible(){
+        Assert.assertTrue(Driver.getDriver().findElement(reviews).isDisplayed());
     }
 
 
