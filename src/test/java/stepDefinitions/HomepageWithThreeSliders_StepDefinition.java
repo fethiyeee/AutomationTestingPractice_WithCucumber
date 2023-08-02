@@ -63,5 +63,10 @@ public class HomepageWithThreeSliders_StepDefinition {
 
     @When("i enter password in password textbox")
     public void iEnterPasswordInPasswordTextbox() {
+        
+    }
+
+    @When("i click on login button")
+    public void iClickOnLoginButton() {
     }
 }
