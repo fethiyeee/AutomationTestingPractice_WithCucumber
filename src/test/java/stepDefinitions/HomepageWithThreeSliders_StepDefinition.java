@@ -58,5 +58,10 @@ public class HomepageWithThreeSliders_StepDefinition {
 
     @When("i enter registered username in username textbox")
     public void iEnterRegisteredUsernameInUsernameTextbox() {
+        
+    }
+
+    @When("i enter password in password textbox")
+    public void iEnterPasswordInPasswordTextbox() {
     }
 }
