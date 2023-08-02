@@ -55,4 +55,8 @@ public class HomepageWithThreeSliders_StepDefinition {
     public void iCanSeeReviewsRegardingThatBook() {
         homepage.reviewsAreVisible();
     }
+
+    @When("i enter registered username in username textbox")
+    public void iEnterRegisteredUsernameInUsernameTextbox() {
+    }
 }
