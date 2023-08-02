@@ -68,5 +68,10 @@ public class HomepageWithThreeSliders_StepDefinition {
 
     @When("i click on login button")
     public void iClickOnLoginButton() {
+        
+    }
+
+    @Then("i must successfully login to the web page")
+    public void iMustSuccessfullyLoginToTheWebPage() {
     }
 }
