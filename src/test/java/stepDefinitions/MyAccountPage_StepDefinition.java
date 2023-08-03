@@ -35,6 +35,7 @@ public class MyAccountPage_StepDefinition {
     @Then("i must successfully login to the web page")
     public void iMustSuccessfullyLoginToTheWebPage() {
 
+        myAccountPage.logInIsSuccessfull();
     }
 
 }
