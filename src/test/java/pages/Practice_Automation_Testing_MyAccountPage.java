@@ -14,6 +14,8 @@ public class Practice_Automation_Testing_MyAccountPage {
 
     By logInButton = By.xpath("//*[@id=\"customer_login\"]/div[1]/form[1]/p[3]/input[3]");
 
+    By logInMessage=By.xpath("//*[@id=\"page-36\"]/div[1]/div[1]/div[1]/p[1]");
+
 
     public void clickMyAccount() {
 
