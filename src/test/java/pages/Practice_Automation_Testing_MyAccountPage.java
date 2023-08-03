@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import utilities.Driver;
 
 public class Practice_Automation_Testing_MyAccountPage {
 
@@ -13,6 +14,11 @@ public class Practice_Automation_Testing_MyAccountPage {
     By logInButton=By.xpath("//*[@id=\"customer_login\"]/div[1]/form[1]/p[3]/input[3]");
 
 
+    public void enterUsername(String username){
+
+        Driver.getDriver().findElement(usernameArea).sendKeys(username);
+
+    }
 
 
 
