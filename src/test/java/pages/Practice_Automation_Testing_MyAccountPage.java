@@ -35,7 +35,6 @@ public class Practice_Automation_Testing_MyAccountPage {
 
     }
 
-
     public void clickLogIn() {
 
         Driver.getDriver().findElement(logInButton).click();
