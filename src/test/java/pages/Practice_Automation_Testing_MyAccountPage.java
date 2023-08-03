@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import utilities.Driver;
 
@@ -39,6 +40,10 @@ public class Practice_Automation_Testing_MyAccountPage {
 
         Driver.getDriver().findElement(logInButton).click();
 
+    }
+
+    public void logInIsSuccessfull(){
+        Assert.assertTrue(Driver.getDriver().findElement(logInMessage).isDisplayed());
     }
 
 
