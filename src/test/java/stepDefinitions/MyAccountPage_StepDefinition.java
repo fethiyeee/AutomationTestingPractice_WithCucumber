@@ -8,6 +8,12 @@ public class MyAccountPage_StepDefinition {
 
     Practice_Automation_Testing_MyAccountPage myAccountPage = new Practice_Automation_Testing_MyAccountPage();
 
+    @When("i click my account button")
+    public void iClickMyAccountButton() {
+
+        myAccountPage.clickMyAccount();
+    }
+
     @When("i enter registered username in username textbox")
     public void iEnterRegisteredUsernameInUsernameTextbox() {
 
@@ -31,8 +37,4 @@ public class MyAccountPage_StepDefinition {
 
     }
 
-
-    @When("i click my account button")
-    public void iClickMyAccountButton() {
-    }
 }
