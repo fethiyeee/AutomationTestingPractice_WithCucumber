@@ -1,4 +1,4 @@
-@reviews
+@logIn
 Feature: Homepage Login Test
   Scenario: Homepage log in with valid username and password
     Given i am on the homepage

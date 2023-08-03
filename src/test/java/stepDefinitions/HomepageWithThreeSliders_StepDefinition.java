@@ -56,23 +56,4 @@ public class HomepageWithThreeSliders_StepDefinition {
         homepage.reviewsAreVisible();
     }
 
-    @When("i enter registered username in username textbox")
-    public void iEnterRegisteredUsernameInUsernameTextbox() {
-        
-    }
-
-    @When("i enter password in password textbox")
-    public void iEnterPasswordInPasswordTextbox() {
-        
-    }
-
-    @When("i click on login button")
-    public void iClickOnLoginButton() {
-        
-    }
-
-    @Then("i must successfully login to the web page")
-    public void iMustSuccessfullyLoginToTheWebPage() {
-
-    }
 }
