@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.837" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Login Test" name="Homepage log in with valid username and password" time="19.685">
+<testsuite name="Cucumber" time="24.71" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Login Test" name="Homepage log in with valid username and password" time="24.602">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 When i click my account button..............................................passed
