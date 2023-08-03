@@ -20,6 +20,11 @@ public class Practice_Automation_Testing_MyAccountPage {
 
     }
 
+    public void enterPassword(String password){
+
+        Driver.getDriver().findElement(passwordArea).sendKeys(password);
+
+    }
 
 
 
