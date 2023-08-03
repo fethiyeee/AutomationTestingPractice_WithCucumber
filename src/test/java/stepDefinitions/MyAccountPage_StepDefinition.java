@@ -32,4 +32,7 @@ public class MyAccountPage_StepDefinition {
     }
 
 
+    @When("i click my account button")
+    public void iClickMyAccountButton() {
+    }
 }
