@@ -37,4 +37,22 @@ public class MyAccountPage_StepDefinition {
 
         myAccountPage.logInIsSuccessfull();
     }
+
+    @When("i enter incorrect username in username textbox")
+    public void iEnterIncorrectUsernameInUsernameTextbox() {
+
+        myAccountPage.enterUsername("fty@gmail.com");
+
+    }
+
+    @When("i enter incorrect password in password textbox")
+    public void iEnterIncorrectPasswordInPasswordTextbox() {
+        myAccountPage.enterPassword("12345");
+
+    }
+
+    @Then("i must see error message")
+    public void iMustSeeErrorMessage() {
+        myAccountPage.logInNotSuccessfull();
+    }
 }
