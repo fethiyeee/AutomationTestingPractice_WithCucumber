@@ -17,6 +17,8 @@ public class Practice_Automation_Testing_MyAccountPage {
 
     By logInMessage=By.xpath("//*[@id=\"page-36\"]/div[1]/div[1]/div[1]/p[1]");
 
+    By errorMessage=By.xpath("//*[@id=\"page-36\"]/div[1]/div[1]/ul[1]/li[1]");
+
 
     public void clickMyAccount() {Driver.getDriver().findElement(myAccountButton).click();}
 
@@ -27,6 +29,8 @@ public class Practice_Automation_Testing_MyAccountPage {
     public void clickLogIn() {Driver.getDriver().findElement(logInButton).click();}
 
     public void logInIsSuccessfull(){Assert.assertTrue(Driver.getDriver().findElement(logInMessage).isDisplayed());}
+
+    public void logInNotSuccessfull(){Assert.assertTrue(Driver.getDriver().findElement(errorMessage).isDisplayed());}
 
 
 }
