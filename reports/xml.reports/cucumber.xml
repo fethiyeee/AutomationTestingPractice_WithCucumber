@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="24.71" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Login Test" name="Homepage log in with valid username and password" time="24.602">
+<testsuite name="Cucumber" time="22.323" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Homepage Login Test" name="Homepage log in with valid username and password" time="22.102">
+<failure type="org.openqa.selenium.NoSuchElementException" message="Unable to find element with locator By.xpath: //*[@id=&quot;page-36&quot;]/div[1]/div[1]/ul[1]/li[1]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: driver.version: RemoteWebDriver">
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@id="page-36"]/div[1]/div[1]/ul[1]/li[1]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pages.Practice_Automation_Testing_MyAccountPage.logInNotSuccessfull(Practice_Automation_Testing_MyAccountPage.java:33)
+	at stepDefinitions.MyAccountPage_StepDefinition.iMustSeeErrorMessage(MyAccountPage_StepDefinition.java:44)
+	at ✽.i must see error message(file:///C:/Users/fethi/IdeaProjects/AutomationPractice_WithCucumber/src/test/resources/features/07_LogInWithInvalidUsernameAndPassword.feature:9)
+]]>
+</failure>
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 When i click my account button..............................................passed
 When i enter registered username in username textbox........................passed
 When i enter password in password textbox...................................passed
 When i click on login button................................................passed
-Then i must successfully login to the web page..............................passed
+Then i must see error message...............................................failed
 ]]></system-out>
 </testcase>
 </testsuite>
