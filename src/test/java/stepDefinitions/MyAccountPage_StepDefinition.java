@@ -38,4 +38,8 @@ public class MyAccountPage_StepDefinition {
         myAccountPage.logInIsSuccessfull();
     }
 
+    @Then("i must see error message")
+    public void iMustSeeErrorMessage() {
+
+    }
 }
