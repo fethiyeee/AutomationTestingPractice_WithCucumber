@@ -41,5 +41,6 @@ public class MyAccountPage_StepDefinition {
     @Then("i must see error message")
     public void iMustSeeErrorMessage() {
 
+        myAccountPage.logInNotSuccessfull();
     }
 }
