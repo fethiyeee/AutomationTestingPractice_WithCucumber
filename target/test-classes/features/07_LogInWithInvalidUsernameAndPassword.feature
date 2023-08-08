@@ -1,9 +1,13 @@
 @logIn2
 Feature: Homepage Login Test
-  Scenario: Homepage log in with valid username and password
+
+  Scenario Outline: log in with invalid username and password
     Given i am on the homepage
     When i click my account button
-    When i enter incorrect username in username textbox
-    When i enter incorrect password in password textbox
-    When i click on login button
+    And i enter invalid username in "<username>" textbox
+    And i enter invalid password in "<password>" textbox
+    And i click on login button
     Then i must see error message
+    Examples: user credentials
+      | username      | password  |
+      | fty@gmail.com | fethiye23 |

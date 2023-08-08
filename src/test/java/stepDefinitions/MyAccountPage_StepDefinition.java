@@ -37,18 +37,16 @@ public class MyAccountPage_StepDefinition {
         myAccountPage.logInIsSuccessfull();
     }
 
-    @When("i enter incorrect username in username textbox")
-    public void iEnterIncorrectUsernameInUsernameTextbox() {
-
-        myAccountPage.enterUsername("fty@gmail.com");
-
+    @And("i enter invalid username in {string} textbox")
+    public void iEnterInvalidUsernameInTextbox(String invalidUsername) {
+        myAccountPage.enterUsername(invalidUsername);
     }
 
-    @When("i enter incorrect password in password textbox")
-    public void iEnterIncorrectPasswordInPasswordTextbox() {
-        myAccountPage.enterPassword("12345");
-
+    @And("i enter invalid password in {string} textbox")
+    public void iEnterInvalidPasswordInTextbox(String invalidPassword) {
+        myAccountPage.enterPassword(invalidPassword);
     }
+
 
     @Then("i must see error message")
     public void iMustSeeErrorMessage() {
@@ -56,19 +54,6 @@ public class MyAccountPage_StepDefinition {
     }
 
 
+
 }
 
-
-/*
-  @When("i enter registered username in username textbox")
-    public void iEnterRegisteredUsernameInUsernameTextbox() {
-
-        myAccountPage.enterUsername("fethiye@gmail.com");
-    }
-
-    @When("i enter password in password textbox")
-    public void iEnterPasswordInPasswordTextbox() {
-
-        myAccountPage.enterPassword("fethiye2344");
-    }
- */
