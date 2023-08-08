@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_MyAccountPage;
@@ -14,16 +15,14 @@ public class MyAccountPage_StepDefinition {
         myAccountPage.clickMyAccount();
     }
 
-    @When("i enter registered username in username textbox")
-    public void iEnterRegisteredUsernameInUsernameTextbox() {
-
-        myAccountPage.enterUsername("fethiye@gmail.com");
+    @And("i enter registered username in {string} textbox")
+    public void iEnterRegisteredUsernameInTextbox(String username) {
+        myAccountPage.enterUsername(username);
     }
 
-    @When("i enter password in password textbox")
-    public void iEnterPasswordInPasswordTextbox() {
-
-        myAccountPage.enterPassword("fethiye2344");
+    @And("i enter registered password in {string} textbox")
+    public void iEnterPasswordInTextbox(String password) {
+        myAccountPage.enterPassword(password);
     }
 
     @When("i click on login button")
@@ -55,4 +54,21 @@ public class MyAccountPage_StepDefinition {
     public void iMustSeeErrorMessage() {
         myAccountPage.logInNotSuccessfull();
     }
+
+
 }
+
+
+/*
+  @When("i enter registered username in username textbox")
+    public void iEnterRegisteredUsernameInUsernameTextbox() {
+
+        myAccountPage.enterUsername("fethiye@gmail.com");
+    }
+
+    @When("i enter password in password textbox")
+    public void iEnterPasswordInPasswordTextbox() {
+
+        myAccountPage.enterPassword("fethiye2344");
+    }
+ */
