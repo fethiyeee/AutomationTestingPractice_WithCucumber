@@ -1,8 +1,11 @@
 @shopFilterByPrice
 Feature: Homepage Login Test
-  Scenario: Homepage log in with valid username and password
+  Scenario Outline: Shop filter by functionality
     Given i am on the homepage
     When i click shop button
-    Then i can adjust the filter by price between 150 to 450 rps
-    When i click on Filter button
-    Then i can view books only between 150 to 450 rps price
+    And i can adjust the filter by price between "<150>" to "<450>" rps
+    And i click on Filter button
+    And i can see books only between "<150>" to "<450>" rps price
+    Examples: filters
+      | 150 |450|
+      | 150 |450|
