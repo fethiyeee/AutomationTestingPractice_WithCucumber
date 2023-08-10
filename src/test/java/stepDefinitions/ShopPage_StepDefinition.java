@@ -10,6 +10,7 @@ public class ShopPage_StepDefinition {
     @When("i click shop button")
     public void i_click_shop_button() {
 
+        shopPage.clickShopButton();
 
     }
 
