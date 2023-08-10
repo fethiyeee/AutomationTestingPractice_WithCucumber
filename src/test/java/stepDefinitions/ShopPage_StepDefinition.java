@@ -2,8 +2,11 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import pages.Practice_Automation_Testing_ShopPage;
 
 public class ShopPage_StepDefinition {
+    Practice_Automation_Testing_ShopPage shopPage=new Practice_Automation_Testing_ShopPage();
+
     @When("i click shop button")
     public void i_click_shop_button() {
 
