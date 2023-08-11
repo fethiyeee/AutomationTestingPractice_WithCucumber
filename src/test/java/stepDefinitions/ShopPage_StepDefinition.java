@@ -22,6 +22,8 @@ public class ShopPage_StepDefinition {
     @And("i click on Filter button")
     public void iClickOnFilterButton() {
 
+        shopPage.clickFilterButton();
+
     }
 
     @And("i can see books only between {string} to {string} rps price")
