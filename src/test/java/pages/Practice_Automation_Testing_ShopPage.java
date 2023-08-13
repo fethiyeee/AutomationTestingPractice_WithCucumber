@@ -15,4 +15,8 @@ public class Practice_Automation_Testing_ShopPage {
     }
 
     public void clickFilterButton(){ Driver.getDriver().findElement(filterButton).click();}
+
+    public void adjustFilter(){
+
+    }
 }
