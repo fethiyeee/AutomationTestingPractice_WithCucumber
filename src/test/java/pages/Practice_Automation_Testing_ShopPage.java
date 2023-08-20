@@ -16,9 +16,9 @@ public class Practice_Automation_Testing_ShopPage {
         Driver.getDriver().findElement(shopButton).click();
     }
 
-    public void sliderNavigateto450(){
+    public void sliderNavigateto450(int a, int b){
         Actions actions=new Actions(Driver.getDriver());
-        actions.dragAndDrop(Driver.getDriver().findElement(slider),Driver.getDriver().findElement(WE450)).perform();
+        actions.dragAndDropBy(Driver.getDriver().findElement(slider),a,b).perform();
 
     }
 
