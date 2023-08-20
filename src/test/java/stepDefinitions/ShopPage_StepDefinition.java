@@ -13,10 +13,8 @@ public class ShopPage_StepDefinition {
         shopPage.clickShopButton();
 
     }
-
-    @And("i can adjust the filter by price between {string} to {string} rps")
-    public void iCanAdjustTheFilterByPriceBetweenToRps(String arg0, String arg1) {
-
+    @And("i can adjust the filter by price between {int} to {int} rps")
+    public void iCanAdjustTheFilterByPriceBetweenToRps(int arg0, int arg1) {
     }
 
     @And("i click on Filter button")
@@ -26,8 +24,7 @@ public class ShopPage_StepDefinition {
 
     }
 
-    @And("i can see books only between {string} to {string} rps price")
-    public void iCanSeeBooksOnlyBetweenToRpsPrice(String arg0, String arg1) {
+    @And("i can see books only between {int} to {int} rps price")
+    public void iCanSeeBooksOnlyBetweenToRpsPrice(int arg0, int arg1) {
     }
-
 }
