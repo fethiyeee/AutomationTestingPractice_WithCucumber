@@ -1,5 +1,6 @@
 @shopFilterByPrice
 Feature: Homepage Login Test
+
   Scenario : Shop filter by functionality
     Given i am on the homepage
     When i click shop button

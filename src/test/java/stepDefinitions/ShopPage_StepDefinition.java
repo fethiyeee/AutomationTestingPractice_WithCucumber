@@ -15,6 +15,7 @@ public class ShopPage_StepDefinition {
     }
     @And("i can adjust the filter by price between {int} to {int} rps")
     public void iCanAdjustTheFilterByPriceBetweenToRps(int arg0, int arg1) {
+        shopPage.sliderNavigateto450();
     }
 
     @And("i click on Filter button")
