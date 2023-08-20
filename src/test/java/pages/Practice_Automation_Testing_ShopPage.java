@@ -16,9 +16,18 @@ public class Practice_Automation_Testing_ShopPage {
         Driver.getDriver().findElement(shopButton).click();
     }
 
-    public void sliderNavigateto450(int a, int b){
-        Actions actions=new Actions(Driver.getDriver());
-        actions.dragAndDropBy(Driver.getDriver().findElement(slider),a,b).perform();
+    public void sliderNavigateto450(int targetPrice){
+        int sliderWidth = Driver.getDriver().findElement(slider).getSize().getWidth();
+        int totalRange = 450 - 150;
+
+        // Belirli fiyat aralığındaki oranı hesaplayın
+        double ratio = (targetPrice - 150) / (double) totalRange;
+
+        // Slider üzerine tıklayarak belirli fiyat aralığına git
+        int targetX = (int) (sliderWidth * ratio);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(Driver.getDriver().findElement(slider), targetX, 0).click().perform();
 
     }
 
