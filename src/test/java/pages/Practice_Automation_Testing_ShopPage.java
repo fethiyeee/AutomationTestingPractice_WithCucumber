@@ -1,22 +1,28 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.Driver;
 
+import java.util.List;
+
+import static org.junit.Assert.fail;
+
 public class Practice_Automation_Testing_ShopPage {
-    By shopButton= By.xpath("//*[@id=\"menu-item-40\"]/a[1]");
-    By slider=By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[1]/span[2]");
-    By WE450=By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/div[1]/span[2]");
-    By filterButton=By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
+    By shopButton = By.xpath("//*[@id=\"menu-item-40\"]/a[1]");
+    By slider = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[1]/span[2]");
+    //By WE450=By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/div[1]/span[2]");
+    By filterButton = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
+    By productPrices = By.xpath("//span[@class='price']");
 
 
-
-    public void clickShopButton(){
+    public void clickShopButton() {
         Driver.getDriver().findElement(shopButton).click();
     }
 
-    public void sliderNavigateto450(int targetPrice){
+    public void sliderNavigateto450(int targetPrice) {
         int sliderWidth = Driver.getDriver().findElement(slider).getSize().getWidth();
         int totalRange = 450 - 150;
 
@@ -31,9 +37,25 @@ public class Practice_Automation_Testing_ShopPage {
 
     }
 
-    public void clickFilterButton(){ Driver.getDriver().findElement(filterButton).click();}
+    public void clickFilterButton() {
+        Driver.getDriver().findElement(filterButton).click();
+    }
 
-    public void adjustFilter(){
+    public void adjustFilter() {
+        List<WebElement> productPriceElements = Driver.getDriver().findElements(productPrices);
 
+        for (int i = 0; i < productPriceElements.size(); i++) {
+            String priceText = productPriceElements.get(i).getText().replace("₹", "").replaceAll("[^0-9.]", "");
+
+            if (!priceText.isEmpty()) {
+                double price = Double.parseDouble(priceText);
+                Assert.assertTrue(price >= 150 && price <= 450);
+            } else {
+                fail("Product price is not in the expected format.");
+            }
+        }
     }
 }
+
+
+

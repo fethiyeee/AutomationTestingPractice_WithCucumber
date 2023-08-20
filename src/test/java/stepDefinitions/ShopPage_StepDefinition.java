@@ -14,8 +14,9 @@ public class ShopPage_StepDefinition {
 
     }
     @And("i can adjust the filter by price between {int} to {int} rps")
-    public void iCanAdjustTheFilterByPriceBetweenToRps(int minPrice, int maxPrice) {
+    public void iCanAdjustTheFilterByPriceBetweenToRps(int minPrice, int maxPrice) throws InterruptedException {
         shopPage.sliderNavigateto450(maxPrice);
+        Thread.sleep(1000);
     }
 
 
@@ -28,5 +29,6 @@ public class ShopPage_StepDefinition {
 
     @And("i can see books only between {int} to {int} rps price")
     public void iCanSeeBooksOnlyBetweenToRpsPrice(int arg0, int arg1) {
+        shopPage.adjustFilter();
     }
 }
