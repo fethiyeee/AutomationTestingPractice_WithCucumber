@@ -1,13 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="11.017" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Login Test" name="log in with invalid username and password - user credentials - Example #1.1" time="10.903">
-<system-out><![CDATA[
-Given i am on the homepage..................................................passed
-When i click my account button..............................................passed
-And i enter invalid username in "fty@gmail.com" textbox.....................passed
-And i enter invalid password in "fethiye23" textbox.........................passed
-And i click on login button.................................................passed
-Then i must see error message...............................................passed
-]]></system-out>
-</testcase>
+<testsuite name="Cucumber" time="0.038" tests="0" skipped="0" failures="0" errors="0">
 </testsuite>
