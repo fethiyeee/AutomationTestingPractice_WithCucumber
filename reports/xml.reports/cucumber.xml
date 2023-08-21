@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.48" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Homepage Login Test" name="Shop filter by functionality" time="20.369">
-<failure type="java.lang.NumberFormatException" message="multiple points">
-<![CDATA[java.lang.NumberFormatException: multiple points
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1914)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:543)
-	at pages.Practice_Automation_Testing_ShopPage.adjustFilter(Practice_Automation_Testing_ShopPage.java:51)
-	at stepDefinitions.ShopPage_StepDefinition.iCanSeeBooksOnlyBetweenToRpsPrice(ShopPage_StepDefinition.java:32)
-	at ✽.i can see books only between 150 to 450 rps price(file:///C:/Users/fethi/IdeaProjects/AutomationPractice_WithCucumber/src/test/resources/features/08_ShopFilterByPriceFunctionality.feature:8)
-]]>
-</failure>
+<testsuite name="Cucumber" time="14.748" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Login Test" name="Shop filter by functionality" time="14.64">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 Then i click shop button....................................................passed
 Then i can adjust the filter by price between 150 to 450 rps................passed
 When i click on Filter button...............................................passed
-Then i can see books only between 150 to 450 rps price......................failed
+Then i can see books only between 150 to 450 rps price......................passed
 ]]></system-out>
 </testcase>
 </testsuite>

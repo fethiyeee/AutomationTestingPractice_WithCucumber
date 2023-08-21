@@ -3,9 +3,10 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_ShopPage;
+import utilities.Driver;
 
 public class ShopPage_StepDefinition {
-    Practice_Automation_Testing_ShopPage shopPage=new Practice_Automation_Testing_ShopPage();
+    Practice_Automation_Testing_ShopPage shopPage = new Practice_Automation_Testing_ShopPage();
 
     @When("i click shop button")
     public void i_click_shop_button() {
@@ -13,10 +14,11 @@ public class ShopPage_StepDefinition {
         shopPage.clickShopButton();
 
     }
-    @And("i can adjust the filter by price between {int} to {int} rps")
-    public void iCanAdjustTheFilterByPriceBetweenToRps(int minPrice, int maxPrice) throws InterruptedException {
-        shopPage.sliderNavigateto450(maxPrice);
-        Thread.sleep(1000);
+
+    @And("i can adjust the filter by price between 150 to 450 rps")
+    public void iCanAdjustTheFilterByPriceBetweenToRps() throws InterruptedException {
+        shopPage.sliderNavigateto450();
+        Thread.sleep(3000);
     }
 
 
@@ -27,8 +29,8 @@ public class ShopPage_StepDefinition {
 
     }
 
-    @And("i can see books only between {int} to {int} rps price")
-    public void iCanSeeBooksOnlyBetweenToRpsPrice(int arg0, int arg1) {
+    @And("i can see books only between 150 to 450 rps price")
+    public void iCanSeeBooksOnlyBetweenToRpsPrice() throws InterruptedException {
         shopPage.adjustFilter();
     }
 }

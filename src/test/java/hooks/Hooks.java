@@ -35,7 +35,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "FailedScenarioScreenshot");
             System.out.println("Screenshot taken for failed scenario: " + scenario.getName());
         }
-        Driver.getDriver().close();
+       Driver.getDriver().close();
     }
 
 
@@ -51,6 +51,8 @@ public class Hooks {
 
         return targetPath;
     }
+
+
 
 
 }

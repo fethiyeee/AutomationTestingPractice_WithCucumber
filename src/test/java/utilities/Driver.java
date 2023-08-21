@@ -1,7 +1,9 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -51,4 +53,22 @@ public class Driver {
         }
     }
 
+    //Scrolling all the way down
+    public static void scrollDownByJS() {
+        JavascriptExecutor jsexecutor = ((JavascriptExecutor) driver);
+        jsexecutor.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+
+    //    Scroll al the way up of a page
+    public static void scrollAllUpByJS(){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+
+    //Scroll into view with JS. THIS IS VERY USEFULL
+    public static void scrollIntoViewJS(WebElement element) {
+        JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
+        jsexecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
 }

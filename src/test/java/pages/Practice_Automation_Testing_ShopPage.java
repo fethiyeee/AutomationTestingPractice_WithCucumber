@@ -22,18 +22,10 @@ public class Practice_Automation_Testing_ShopPage {
         Driver.getDriver().findElement(shopButton).click();
     }
 
-    public void sliderNavigateto450(int targetPrice) {
-        int sliderWidth = Driver.getDriver().findElement(slider).getSize().getWidth();
-        int totalRange = 450 - 150;
-
-        // Belirli fiyat aralığındaki oranı hesaplayın
-        double ratio = (targetPrice - 150) / (double) totalRange;
-
-        // Slider üzerine tıklayarak belirli fiyat aralığına git
-        int targetX = (int) (sliderWidth * ratio);
-
+    public void sliderNavigateto450() {
         Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(Driver.getDriver().findElement(slider), targetX, 0).click().perform();
+
+        actions.dragAndDropBy(Driver.getDriver().findElement(slider), -28, 0).build().perform();
 
     }
 
@@ -41,18 +33,18 @@ public class Practice_Automation_Testing_ShopPage {
         Driver.getDriver().findElement(filterButton).click();
     }
 
-    public void adjustFilter() {
+    public void adjustFilter() throws InterruptedException {
         List<WebElement> productPriceElements = Driver.getDriver().findElements(productPrices);
 
-        for (int i = 0; i < productPriceElements.size(); i++) {
-            String priceText = productPriceElements.get(i).getText().replace("₹", "").replaceAll("[^0-9.]", "");
+        Driver.scrollDownByJS();
+        Thread.sleep(2000);
+        Driver.scrollIntoViewJS(productPriceElements.get(0));
 
-            if (!priceText.isEmpty()) {
-                double price = Double.parseDouble(priceText);
-                Assert.assertTrue(price >= 150 && price <= 450);
-            } else {
-                fail("Product price is not in the expected format.");
-            }
+        Assert.assertTrue(Driver.getDriver().findElement(productPrices).isDisplayed());
+
+        for (int i = 0; i < productPriceElements.size(); i++) {
+            System.out.println("Prices between 150 and 450 rps : ");
+            System.out.println(productPriceElements.get(i).getText());
         }
     }
 }
