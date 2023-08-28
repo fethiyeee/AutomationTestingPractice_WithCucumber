@@ -1,9 +1,10 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_ShopPage;
-import utilities.Driver;
+
 
 public class ShopPage_StepDefinition {
     Practice_Automation_Testing_ShopPage shopPage = new Practice_Automation_Testing_ShopPage();
@@ -32,5 +33,14 @@ public class ShopPage_StepDefinition {
     @And("i can see books only between 150 to 450 rps price")
     public void iCanSeeBooksOnlyBetweenToRpsPrice() throws InterruptedException {
         shopPage.adjustFilter();
+    }
+
+    @When("i click any of the product links available in the product category")
+    public void iClickAnyOfTheProductLinksAvailableInTheProductCategory() {
+        
+    }
+
+    @Then("i can view only that particular product")
+    public void iCanViewOnlyThatParticularProduct() {
     }
 }
