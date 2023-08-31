@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.748" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Login Test" name="Shop filter by functionality" time="14.64">
+<testsuite name="Cucumber" time="20.14" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Login Test" name="Shop product categories functionality" time="20.038">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 Then i click shop button....................................................passed
-Then i can adjust the filter by price between 150 to 450 rps................passed
-When i click on Filter button...............................................passed
-Then i can see books only between 150 to 450 rps price......................passed
+When i click any of the product links available in the product category.....passed
+Then i can view only that particular product................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -17,10 +17,13 @@ public class Hooks {
 
 
     @Before
-    public void setUo(Scenario scenario) {
+    public void setUo(Scenario scenario) throws InterruptedException {
         System.out.println("scenario started..");
         System.out.println("scenario id = " + scenario.getId());
         System.out.println("scenario name = " + scenario.getName());
+        Driver.waitForPageToLoad(2000);
+
+
 
     }
 
@@ -35,7 +38,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "FailedScenarioScreenshot");
             System.out.println("Screenshot taken for failed scenario: " + scenario.getName());
         }
-       Driver.getDriver().close();
+      // Driver.getDriver().close();
     }
 
 

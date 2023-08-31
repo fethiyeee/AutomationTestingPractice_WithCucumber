@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_ShopPage;
+import utilities.Driver;
 
 
 public class ShopPage_StepDefinition {
@@ -42,5 +43,6 @@ public class ShopPage_StepDefinition {
 
     @Then("i can view only that particular product")
     public void iCanViewOnlyThatParticularProduct() {
+        shopPage.productParticularIsVisible();
     }
 }
