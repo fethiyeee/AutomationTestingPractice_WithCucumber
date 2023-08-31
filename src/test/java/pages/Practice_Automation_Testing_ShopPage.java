@@ -7,8 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import utilities.Driver;
 
 import java.util.List;
-
-import static org.junit.Assert.fail;
+import java.util.Random;
 
 public class Practice_Automation_Testing_ShopPage {
     By shopButton = By.xpath("//*[@id=\"menu-item-40\"]/a[1]");
@@ -16,6 +15,7 @@ public class Practice_Automation_Testing_ShopPage {
     //By WE450=By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/div[1]/span[2]");
     By filterButton = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
     By productPrices = By.xpath("//span[@class='price']");
+    By products=By.xpath("//a[@class='woocommerce-LoopProduct-link']");
 
 
     public void clickShopButton() {
@@ -46,6 +46,15 @@ public class Practice_Automation_Testing_ShopPage {
             System.out.println("Prices between 150 and 450 rps : ");
             System.out.println(productPriceElements.get(i).getText());
         }
+    }
+
+    public void clickProductRandom(){
+        List<WebElement>productList=Driver.getDriver().findElements(products);
+        Random random = new Random();
+        int randomIndex = random.nextInt(productList.size());
+
+        productList.get(randomIndex).click();
+
     }
 }
 
