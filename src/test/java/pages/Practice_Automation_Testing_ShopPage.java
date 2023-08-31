@@ -16,6 +16,8 @@ public class Practice_Automation_Testing_ShopPage {
     By filterButton = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
     By productPrices = By.xpath("//span[@class='price']");
     By products=By.xpath("//a[@class='woocommerce-LoopProduct-link']");
+    By productName=By.xpath("//h1");
+    By productParticular=By.xpath("//div[@class='summary entry-summary']");
 
 
     public void clickShopButton() {
@@ -55,6 +57,10 @@ public class Practice_Automation_Testing_ShopPage {
 
         productList.get(randomIndex).click();
 
+    }
+
+    public void productParticularIsVisible(){
+        Assert.assertTrue(Driver.getDriver().findElement(productParticular).getText().contains(Driver.getDriver().findElement(productName).getText()));
     }
 }
 

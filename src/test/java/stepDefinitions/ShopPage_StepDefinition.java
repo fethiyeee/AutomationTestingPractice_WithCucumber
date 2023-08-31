@@ -37,7 +37,7 @@ public class ShopPage_StepDefinition {
 
     @When("i click any of the product links available in the product category")
     public void iClickAnyOfTheProductLinksAvailableInTheProductCategory() {
-        
+        shopPage.clickProductRandom();
     }
 
     @Then("i can view only that particular product")
