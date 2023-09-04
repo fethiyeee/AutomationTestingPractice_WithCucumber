@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -17,9 +17,9 @@ public class Practice_Automation_Testing_ShopPage {
     By filterButton = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
     By productPrices = By.xpath("//span[@class='price']");
     By products = By.xpath("//a[@class='woocommerce-LoopProduct-link']");
-
     By productName = By.xpath("//h1");
     By productParticular = By.xpath("//div[@class='summary entry-summary']");
+    By defaultSorting = By.xpath("//*[@id=\"content\"]/form[1]/select[1]");
 
 
     public void clickShopButton() {
@@ -40,7 +40,7 @@ public class Practice_Automation_Testing_ShopPage {
         List<WebElement> productPriceElements = Driver.getDriver().findElements(productPrices);
 
         Driver.scrollDownByJS();
-        Driver.waitForVisibility(productPrices,1000);
+        Driver.waitForVisibility(productPrices, 1000);
         Driver.scrollIntoViewJS(productPriceElements.get(0));
 
         Assert.assertTrue(Driver.getDriver().findElement(productPrices).isDisplayed());
@@ -52,12 +52,12 @@ public class Practice_Automation_Testing_ShopPage {
     }
 
     public void clickProductRandom() {
-        List<WebElement>productList=Driver.getDriver().findElements(products);
+        List<WebElement> productList = Driver.getDriver().findElements(products);
         if (!productList.isEmpty()) {
             Random random = new Random();
             int randomIndex = random.nextInt(productList.size());
             WebElement randomElement = productList.get(randomIndex);
-            Driver.waitForClickablility(randomElement,3000);
+            Driver.waitForClickablility(randomElement, 3000);
             randomElement.click();
         } else {
             System.out.println("product not found..");
@@ -67,6 +67,16 @@ public class Practice_Automation_Testing_ShopPage {
 
     public void productParticularIsVisible() {
         Assert.assertTrue(Driver.getDriver().findElement(productParticular).getText().contains(Driver.getDriver().findElement(productName).getText()));
+    }
+
+    public void clickDefaultSorting() {
+        Driver.getDriver().findElement(defaultSorting).click();
+    }
+
+    public void sortByPopularity() {
+        Select select = new Select(Driver.getDriver().findElement(defaultSorting));
+        select.selectByValue("popularity");
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("popularity"));
     }
 }
 
