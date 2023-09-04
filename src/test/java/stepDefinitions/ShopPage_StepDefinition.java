@@ -41,7 +41,7 @@ public class ShopPage_StepDefinition {
         shopPage.clickProductRandom();
     }
 
-    @Then("i can view only that particular product")
+    @Then("i can see only that particular product")
     public void iCanViewOnlyThatParticularProduct() {
         shopPage.productParticularIsVisible();
     }

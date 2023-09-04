@@ -4,4 +4,4 @@ Feature: Homepage Login Test
     Given i am on the homepage
     Then i click shop button
     When i click any of the product links available in the product category
-    Then i can view only that particular product
+    Then i can see only that particular product
