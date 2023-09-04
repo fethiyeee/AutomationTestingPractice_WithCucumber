@@ -4,7 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Practice_Automation_Testing_ShopPage;
-import utilities.Driver;
+
 
 
 public class ShopPage_StepDefinition {
@@ -12,9 +12,7 @@ public class ShopPage_StepDefinition {
 
     @When("i click shop button")
     public void i_click_shop_button() {
-
         shopPage.clickShopButton();
-
     }
 
     @And("i can adjust the filter by price between 150 to 450 rps")
@@ -23,12 +21,9 @@ public class ShopPage_StepDefinition {
         Thread.sleep(3000);
     }
 
-
     @And("i click on Filter button")
     public void iClickOnFilterButton() {
-
         shopPage.clickFilterButton();
-
     }
 
     @And("i can see books only between 150 to 450 rps price")
@@ -48,10 +43,11 @@ public class ShopPage_StepDefinition {
 
     @When("i click on Sort by Popularity item in Default sorting dropdown")
     public void iClickOnSortByPopularityItemInDefaultSortingDropdown() {
-        
+        shopPage.clickDefaultSorting();
     }
 
     @Then("i can see the popular products only")
     public void iCanSeeThePopularProductsOnly() {
+        shopPage.sortByPopularity();
     }
 }

@@ -4,7 +4,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
 import java.util.List;
@@ -19,7 +21,8 @@ public class Practice_Automation_Testing_ShopPage {
     By products = By.xpath("//a[@class='woocommerce-LoopProduct-link']");
     By productName = By.xpath("//h1");
     By productParticular = By.xpath("//div[@class='summary entry-summary']");
-    By defaultSorting = By.xpath("//*[@id=\"content\"]/form[1]/select[1]");
+    By defaultSorting = By.xpath("//select[@name='orderby']");
+    By popularitySort = By.xpath("//*[@id=\"content\"]/form[1]/select[1]");
 
 
     public void clickShopButton() {
@@ -70,15 +73,21 @@ public class Practice_Automation_Testing_ShopPage {
     }
 
     public void clickDefaultSorting() {
+        Driver.waitForVisibility(defaultSorting, 2000);
         Driver.getDriver().findElement(defaultSorting).click();
     }
 
     public void sortByPopularity() {
-        Select select = new Select(Driver.getDriver().findElement(defaultSorting));
+
+        WebElement dropdownElement = Driver.getDriver().findElement(defaultSorting);
+        Select select = new Select(dropdownElement);
         select.selectByValue("popularity");
-        Assert.assertTrue(Driver.getDriver().getTitle().contains("popularity"));
+        Assert.assertTrue(Driver.getDriver().findElement(popularitySort).getText().contains("popularity"));
     }
 }
+
+
+
 
 
 

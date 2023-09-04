@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="17.645" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage Login Test" name="Shop product categories functionality" time="17.493">
+<testsuite name="Cucumber" time="17.805" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage Login Test" name="Shop product sorting by popularity" time="17.693">
 <system-out><![CDATA[
 Given i am on the homepage..................................................passed
 Then i click shop button....................................................passed
-When i click any of the product links available in the product category.....passed
-Then i can view only that particular product................................passed
+When i click on Sort by Popularity item in Default sorting dropdown.........passed
+Then i can see the popular products only....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
