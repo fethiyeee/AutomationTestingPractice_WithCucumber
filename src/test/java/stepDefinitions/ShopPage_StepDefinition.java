@@ -45,4 +45,13 @@ public class ShopPage_StepDefinition {
     public void iCanViewOnlyThatParticularProduct() {
         shopPage.productParticularIsVisible();
     }
+
+    @When("i click on Sort by Popularity item in Default sorting dropdown")
+    public void iClickOnSortByPopularityItemInDefaultSortingDropdown() {
+        
+    }
+
+    @Then("i can see the popular products only")
+    public void iCanSeeThePopularProductsOnly() {
+    }
 }
