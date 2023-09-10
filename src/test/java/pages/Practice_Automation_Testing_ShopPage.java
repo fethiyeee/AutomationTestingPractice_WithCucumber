@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Practice_Automation_Testing_ShopPage {
-    By dismissButton = By.xpath("//div[@id='dismiss-button']");
+    //By dismissButton = By.xpath("//div[@id='dismiss-button']");
     By shopButton = By.xpath("//*[@id=\"menu-item-40\"]/a[1]");
     By slider = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[1]/span[2]");
     By filterButton = By.xpath("//*[@id=\"woocommerce_price_filter-2\"]/form[1]/div[1]/div[2]/button[1]");
