@@ -31,9 +31,9 @@ Dieser Befehl führt automatisch die Test-Szenarien aus und zeigt die Ergebnisse
 
 ## Testberichte
 
--maven-cucumber-reporting
--maven-failsafe-plugin
--maven-surefire-plugin
+- maven-cucumber-reporting
+- maven-failsafe-plugin
+- maven-surefire-plugin
 
 
 
