@@ -8,7 +8,7 @@ Stellen Sie sicher, dass Java 11 JDK auf Ihrem System installiert ist.
 
 Abhängigkeiten:
 
-- Selenium WebDriver.
+- Selenium WebDriver
 - WebDriverManager
 - Cucumber-java
 - Cucumber-junit
@@ -32,8 +32,10 @@ Dieser Befehl führt automatisch die Test-Szenarien aus und zeigt die Ergebnisse
 ## Testberichte
 
 - maven-cucumber-reporting
-- maven-failsafe-plugin
-- maven-surefire-plugin
+-  maven-failsafe-plugin
+-  maven-surefire-plugin
+
+  
 
 
 
